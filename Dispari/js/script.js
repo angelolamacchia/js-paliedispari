@@ -16,19 +16,19 @@ if (sceltaPariDispari != "pari" && sceltaPariDispari != "dispari") {
     //creo la var prompt di scelta da 1 a 5
     var scelta1a5 = parseInt( prompt("Inserire un numero da 1 a 5") );
 
-    //genero un numero random da 1 a 5
-    var numeroRandom5 = numeroRandom(5);
-    alert("Il mio numero è: " + numeroRandom5);
-
-    //sommo il numero utente con quello random
-    var somma = scelta1a5 + numeroRandom5;
-
     //controllo che il numero sia tra 1 e 5
     if (scelta1a5==0 || scelta1a5>5) {
         alert("errore inserire un numero da 1 a 5");
         alert("Ritenti?");
         location.reload();
     } else {
+        //genero un numero random da 1 a 5
+        var numeroRandom5 = numeroRandom(5);
+        alert("Il mio numero è: " + numeroRandom5);
+
+        //sommo il numero utente con quello random
+        var somma = scelta1a5 + numeroRandom5;
+
         //definisco una variabile se è pari o dispari
         var pariDispari;
         console.log(somma);
